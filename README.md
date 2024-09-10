@@ -1,2 +1,2 @@
 # My_website
-This is my website which will shiw you guys about my history
+This is my website which will show you guys about my history
