@@ -1,2 +1,2 @@
-# My_website
+# My_skibidi_website
 This is my website which will show you guys about my history
