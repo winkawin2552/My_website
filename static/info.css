@@ -6,14 +6,12 @@ html, body {
 .background {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     background: linear-gradient(90deg, rgb(160, 197, 222) 0%, rgb(150, 212, 161) 100%);
-    display: flex;
-    flex-direction: column;
 }
 
 .page-wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Full height of viewport */
+    min-height: 100vh; /* Ensures the page takes up at least the full viewport height */
 }
 
 header {
@@ -58,39 +56,40 @@ nav a:hover {
 }
 
 main {
-    flex: 1; /* Takes up the remaining space */
+    flex: 1; /* Allows the main content area to expand and push the footer down */
+    padding: 20px;
 }
 
-article {
-    overflow: hidden;
+.info-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(90deg, rgb(229, 169, 221) 0%, rgb(217, 225, 186) 100%);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 5%;
 }
 
-article figure {
-    float: left;
-    margin-right: 20px;
+.info-content h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-article figure img {
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 100%;
-    margin-top: 20%;
+.info-item {
+    margin-bottom: 15px;
 }
 
-.text-content {
-    overflow: hidden;
-    margin-top: 15%;
-    margin-left: 700px;
-    font-size: 300%;
-}
-
-h4 {
-    margin: 0 0 10px 0;
-}
-
-p {
+.info-item h3 {
     margin: 0;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.info-item p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #666;
 }
 
 footer {
@@ -100,6 +99,7 @@ footer {
     text-align: center;
     color: #333;
     font-size: 1rem;
+    position: relative;
 }
 
 .footer-content {

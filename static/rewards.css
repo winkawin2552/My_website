@@ -1,11 +1,12 @@
 html, body {
     height: 100%;
     margin: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .background {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     background: linear-gradient(90deg, rgb(160, 197, 222) 0%, rgb(150, 212, 161) 100%);
+    color: #333;
     display: flex;
     flex-direction: column;
 }
@@ -13,7 +14,7 @@ html, body {
 .page-wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Full height of viewport */
+    min-height: 100vh;
 }
 
 header {
@@ -58,39 +59,38 @@ nav a:hover {
 }
 
 main {
-    flex: 1; /* Takes up the remaining space */
+    flex: 1;
+    padding: 20px;
 }
 
-article {
-    overflow: hidden;
+.activities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
 }
 
-article figure {
-    float: left;
-    margin-right: 20px;
+.activity-card {
+    background-color: #5b9baa;
+    border-radius: 10px;
+    padding: 15px;
+    width: 90%;
+    max-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff;
 }
 
-article figure img {
-    width: 500px;
-    height: 500px;
+.activity-card img {
+    width: 100%;
+    height: 200px;
     object-fit: cover;
-    border-radius: 100%;
-    margin-top: 20%;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-.text-content {
-    overflow: hidden;
-    margin-top: 15%;
-    margin-left: 700px;
-    font-size: 300%;
-}
-
-h4 {
-    margin: 0 0 10px 0;
-}
-
-p {
-    margin: 0;
+.activity-card p {
+    font-size: 1rem;
 }
 
 footer {
@@ -125,11 +125,4 @@ footer p {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-}
-
-.social-media a {
-    text-decoration: none;
-    color: #555;
-    font-size: 1.2rem;
-    transition: color 0.3s;
 }
